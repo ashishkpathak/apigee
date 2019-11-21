@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="QT_Limit" version="SHA-512:c88b6c4aeef2d951c003818430264fa08ff848668373b87d4b173090e7fc0acdc427ed403b32d6f5d8c3c3f009905fb9e46d366b70264677085d1b7049741e74"/>
+        <VersionInfo resourceName="Quota-1" version="SHA-512:77aee91de996673c373bc655f4b9f070470758a7a76b94a32c826a1db4dc098dbfc73b8e95745443932577e37724ff7817a5a9e63adc6a1b3e23a83bccb935d4"/>
+        <VersionInfo resourceName="SA_Limit" version="SHA-512:2f7e5754e02cfb5001309e274a3864ce6ffd0e4006527101ff4628264467bf411aa42a95e82f0a75c36c0b3ae130f3b7d429fac3d4eb53ad60aa178acfd476ee"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:840a1a6a243af8da8f20b1020d932e5a571633ff7987a7f4e5afcaa5e7490e722dd0f8654ae0fb409b5b8a46db2c1a17d7640c0e605ab475e9a5aa89dedd29cc"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:43d08a58f2a7fddb415b15396ab338725eb90881f61e4540733ed8f4e65ce6ba06afd2be2be313eb1d2c775c399300d0aa9118b5f3d6ff95ea498e499b454115"/>
+    </TargetEndpoints>
+</Manifest>
