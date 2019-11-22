@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="demo-oauth">
+    <Basepaths>/demo-oauth</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1574383670328</CreatedAt>
+    <CreatedBy>ashish.pathak@optus.com.au</CreatedBy>
+    <Description>Generate token</Description>
+    <DisplayName>demo-oauth</DisplayName>
+    <LastModifiedAt>1574384576333</LastModifiedAt>
+    <LastModifiedBy>ashish.pathak@optus.com.au</LastModifiedBy>
+    <ManifestVersion>SHA-512:77a3ef628cab7de87b09615073eea15ab04a79e319391134e9a821aaa95d92b3e08a5e8e8000bcfcd99bc73734fc7e97e7af93e96e5c91dd87005577806f3e53</ManifestVersion>
+    <Policies>
+        <Policy>OA_GenerateToken</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>
