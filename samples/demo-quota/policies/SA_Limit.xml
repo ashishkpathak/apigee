@@ -2,8 +2,7 @@
 <SpikeArrest async="false" continueOnError="false" enabled="true" name="SA_Limit">
     <DisplayName>SA_Limit</DisplayName>
     <Properties/>
-    <Identifier ref="request.header.some-header-name"/>
     <MessageWeight ref="request.header.weight"/>
     <UseEffectiveCount>true</UseEffectiveCount>
-    <Rate>20pm</Rate>
+    <Rate>30pm</Rate>
 </SpikeArrest>

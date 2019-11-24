@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM_QuotaHandler">
+    <DisplayName>AM_QuotaHandler</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="application/json">\{"error": 
+            \{"message":"Custom Fault Handling: Quota Exceeded.",
+             "detail":"{fault.name}"}} </Payload>
+        <StatusCode>429</StatusCode>
+        <ReasonPhrase>Too Many Requests</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

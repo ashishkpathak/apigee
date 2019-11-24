@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest name="manifest">
     <Policies>
-        <VersionInfo resourceName="QT_Limit" version="SHA-512:c88b6c4aeef2d951c003818430264fa08ff848668373b87d4b173090e7fc0acdc427ed403b32d6f5d8c3c3f009905fb9e46d366b70264677085d1b7049741e74"/>
-        <VersionInfo resourceName="Quota-1" version="SHA-512:77aee91de996673c373bc655f4b9f070470758a7a76b94a32c826a1db4dc098dbfc73b8e95745443932577e37724ff7817a5a9e63adc6a1b3e23a83bccb935d4"/>
-        <VersionInfo resourceName="SA_Limit" version="SHA-512:2f7e5754e02cfb5001309e274a3864ce6ffd0e4006527101ff4628264467bf411aa42a95e82f0a75c36c0b3ae130f3b7d429fac3d4eb53ad60aa178acfd476ee"/>
+        <VersionInfo resourceName="AM_QuotaHandler" version="SHA-512:1f4ff36ff07702144b9efe0179434cd663d421c765702bfec82557a65d88a7d90dcb320d728f0baf44e60d7b0ff88c039d7d48307c6b7c15a752e3f48f680651"/>
+        <VersionInfo resourceName="AM_SpikeHandler" version="SHA-512:60aa90e39defc7e40f1b474a04c10f33d9bf4aac2da2d355b310e9719c1dac9a53e7cbe8ea489fa6e5538622a71976c109bd3211c68e61926ba69d97049b82db"/>
+        <VersionInfo resourceName="OA_VerifyToken" version="SHA-512:fce65909bdba5a9cb3120bdd78f888d16e8e4cd9df434fd907423da0419bdbbc9b5832a086d82f59d055f425e44bf6d00be4263067ceaed81f51507274c7fafc"/>
+        <VersionInfo resourceName="QT_Limit" version="SHA-512:463dd0a22e8ea6ebf4aad3a219ffc7a82ae4424770f50e36d36f9dc445fe7691872eea379e3b6393de372599761f9f4d8be4711886e7b48b3fa75e47de433f69"/>
+        <VersionInfo resourceName="SA_Limit" version="SHA-512:ccd33590a7be7dda36370c984ac74c162482e73de9211ddd3de56555c58b1e1a63257145cc767816dff5c2e35f1de2b231b125977e0f6c33b7ab88c7d39aaa27"/>
+        <VersionInfo resourceName="VA_Key" version="SHA-512:2117c6f1ff11a9841c57e21c5b90c56a30cfe894cd73d019e8b9387f9ec79d8dc0568c184a24673df0d0d8f556903a63227a444d7fbd4e83d45185bcef9d9ec1"/>
     </Policies>
     <ProxyEndpoints>
-        <VersionInfo resourceName="default" version="SHA-512:840a1a6a243af8da8f20b1020d932e5a571633ff7987a7f4e5afcaa5e7490e722dd0f8654ae0fb409b5b8a46db2c1a17d7640c0e605ab475e9a5aa89dedd29cc"/>
+        <VersionInfo resourceName="default" version="SHA-512:13a013f111a62f86ea828c0c937dd5c212d8c47476e237d6a4ef5bc25df9eb6817e0a11e27a4b20feea4750ba634e2a324395af3b253fba5c15d99cbb067894c"/>
     </ProxyEndpoints>
     <Resources/>
     <SharedFlows/>
