@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest name="manifest">
     <Policies>
+        <VersionInfo resourceName="AM_DefaultHandler" version="SHA-512:209d3d4a2d2abe3a7e28e1762b90b597f91f73e55577bb99d39c28d0f7ca8d2382347710b21af5081d70242af99621af4697ff6b9c8021c8ad301ba72742073d"/>
         <VersionInfo resourceName="AM_QuotaHandler" version="SHA-512:1f4ff36ff07702144b9efe0179434cd663d421c765702bfec82557a65d88a7d90dcb320d728f0baf44e60d7b0ff88c039d7d48307c6b7c15a752e3f48f680651"/>
         <VersionInfo resourceName="AM_SpikeHandler" version="SHA-512:60aa90e39defc7e40f1b474a04c10f33d9bf4aac2da2d355b310e9719c1dac9a53e7cbe8ea489fa6e5538622a71976c109bd3211c68e61926ba69d97049b82db"/>
         <VersionInfo resourceName="OA_VerifyToken" version="SHA-512:fce65909bdba5a9cb3120bdd78f888d16e8e4cd9df434fd907423da0419bdbbc9b5832a086d82f59d055f425e44bf6d00be4263067ceaed81f51507274c7fafc"/>
@@ -9,7 +10,7 @@
         <VersionInfo resourceName="VA_Key" version="SHA-512:2117c6f1ff11a9841c57e21c5b90c56a30cfe894cd73d019e8b9387f9ec79d8dc0568c184a24673df0d0d8f556903a63227a444d7fbd4e83d45185bcef9d9ec1"/>
     </Policies>
     <ProxyEndpoints>
-        <VersionInfo resourceName="default" version="SHA-512:13a013f111a62f86ea828c0c937dd5c212d8c47476e237d6a4ef5bc25df9eb6817e0a11e27a4b20feea4750ba634e2a324395af3b253fba5c15d99cbb067894c"/>
+        <VersionInfo resourceName="default" version="SHA-512:ce5ddd5a480cf855b47639a2911d8bc15c1f11725125277f7e29ef39a95dccfde17907c773b27c52eb7585ad75e9b80f832bc7dbbd43ff32d2d4f37fcab3555d"/>
     </ProxyEndpoints>
     <Resources/>
     <SharedFlows/>

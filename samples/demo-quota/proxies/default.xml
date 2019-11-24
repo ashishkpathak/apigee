@@ -15,6 +15,11 @@
         <Condition>(fault.name Matches "QuotaViolation")</Condition>
     </FaultRule>
   </FaultRules>
+  <DefaultFaultRule name="default-fault">
+      <Step>
+          <Name>AM_DefaultHandler</Name>
+      </Step>
+  </DefaultFaultRule>
   <PreFlow name="PreFlow">
         <Request>
             <Step>
