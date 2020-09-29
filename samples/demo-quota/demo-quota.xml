@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="2" name="demo-quota">
+<APIProxy revision="9" name="demo-quota">
     <Basepaths>/demo-quota</Basepaths>
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
-    <CreatedAt>1573951027171</CreatedAt>
+    <CreatedAt>1574646078035</CreatedAt>
     <CreatedBy>ashish.pathak@optus.com.au</CreatedBy>
     <Description></Description>
     <DisplayName>demo-quota</DisplayName>
-    <LastModifiedAt>1574363657857</LastModifiedAt>
+    <LastModifiedAt>1575849962149</LastModifiedAt>
     <LastModifiedBy>ashish.pathak@optus.com.au</LastModifiedBy>
-    <ManifestVersion>SHA-512:263d977c6834693a1c88b7e4a3e6de3588577f4d8e21554ee6dd7bd55fc286bdb48112dcc6545aa7ddf9756fc2922a77bc5fe647dfb9ce9692e2c0e3f6e3465a</ManifestVersion>
+    <ManifestVersion>SHA-512:aff7fd3434165d3a8c5da774250954262ce42181984d88d51d8501b98777501f8a626555b3b0772d779aa939a805680605b473d4b1aa130904457c5532c60baf</ManifestVersion>
     <Policies>
+        <Policy>AM_AssignJWT</Policy>
+        <Policy>AM_DefaultHandler</Policy>
+        <Policy>AM_JWTHeader</Policy>
+        <Policy>AM_QuotaHandler</Policy>
+        <Policy>AM_SpikeHandler</Policy>
+        <Policy>GJWT_UserInfo</Policy>
         <Policy>QT_Limit</Policy>
-        <Policy>Quota-1</Policy>
         <Policy>SA_Limit</Policy>
     </Policies>
     <ProxyEndpoints>
