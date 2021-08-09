@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM_AssignJWT">
+    <DisplayName>AM_AssignJWT</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>private.key</Name>
+        <Value>jwt-variable</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>
