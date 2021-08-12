@@ -1,0 +1,283 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "The first version of the USPTO IP MARKET PLACE Patent information System REST API.",
+    "version": "1.0",
+    "title": "USPTO IP MARKET PLACE Patent Information System REST Services",
+    "contact": {
+      "name": "ODD Team"
+    }
+  },
+  "host": "developer.uspto.gov",
+  "basePath": "/ipmarketplace-api",
+  "tags": [{
+    "name": "USPTO IP MARKET PLACE Patent Search",
+    "description": "USPTO IP MARKET PLACE Patent Information"
+  }],
+  "paths": {
+    "/search/filters": {
+      "post": {
+        "tags": ["USPTO IP MARKET PLACE Patent Search"],
+        "summary": "Provides USPTO IP MARKET PLACE patent information",
+        "description": "USPTO IP MARKET PLACE data",
+        "operationId": "searchCovidDataWithFiltersUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [{
+          "in": "body",
+          "name": "searchInput",
+          "description": "Searches Ip Market Place data.",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/SearchInput"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CovidDataSearchRecord"
+              }
+            }
+          },
+          "401": {
+            "description": "Requestor must authenticate in order to access resource"
+          },
+          "404": {
+            "description": "Resouce not found or query did not return any data"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/search/query": {
+      "get": {
+        "tags": ["USPTO IP MARKET PLACE Patent Search"],
+        "summary": "Provides USPTO IP MARKET PLACE patent information",
+        "description": "USPTO IP MARKET PLACE data",
+        "operationId": "searchCovidDataWithQueryUsingGET",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [{
+          "name": "searchText",
+          "in": "query",
+          "description": "Search Text",
+          "required": false,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CovidDataSearchRecord"
+              }
+            }
+          },
+          "401": {
+            "description": "Requestor must authenticate in order to access resource"
+          },
+          "404": {
+            "description": "Resouce not found or query did not return any data"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AggregationInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "CovidDataSearchRecord": {
+      "type": "object",
+      "properties": {
+        "additionalInformationText": {
+          "type": "string",
+          "example": "Additional Information if avaialable"
+        },
+        "assigneeNameText": {
+          "type": "array",
+          "example": "Assignee lsit of the patent",
+          "items": {
+            "type": "string"
+          }
+        },
+        "firstInventorName": {
+          "type": "string",
+          "example": "Name of the first inventor of the invention"
+        },
+        "grantDate": {
+          "type": "string",
+          "example": "Patent Issue Date"
+        },
+        "inventionAbstractText": {
+          "type": "string",
+          "example": "Abstract of the invention"
+        },
+        "inventionTitle": {
+          "type": "string",
+          "example": "Title of the invention"
+        },
+        "inventorNameText": {
+          "type": "array",
+          "example": "Other inventors list",
+          "items": {
+            "type": "string"
+          }
+        },
+        "licenseAvailabilityCategory": {
+          "type": "string",
+          "example": "License avaialbility indicator, Avaialable, Unavailable or Unknown"
+        },
+        "licenseeContactEmailAddressText": {
+          "type": "string",
+          "example": "Email of licensing contact"
+        },
+        "licenseeContactName": {
+          "type": "string",
+          "example": "Contact name for licensing"
+        },
+        "licenseeContactPhoneNumber": {
+          "type": "string",
+          "example": "Contact phone number for licensing"
+        },
+        "licenseeContactWebAddressURI": {
+          "type": "string",
+          "example": "Website URL for licesnsing contact"
+        },
+        "patentAvailabilityIndicator": {
+          "type": "string",
+          "example": "Is the invention patented or not"
+        },
+        "patentNumber": {
+          "type": "string",
+          "example": "Patent Number"
+        },
+        "pgPublicationAvailabilityIndicator": {
+          "type": "string",
+          "example": "Is the invention published or not"
+        },
+        "publicationDate": {
+          "type": "string",
+          "example": "Publication date"
+        },
+        "publicationNumber": {
+          "type": "string",
+          "example": "Publication Number"
+        },
+        "recordIdentifier": {
+          "type": "string",
+          "example": "Patent Data Record identifier"
+        }
+      }
+    },
+    "FacetMapInput": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "Map«string,string»": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "SearchInput": {
+      "type": "object",
+      "properties": {
+        "dateRangeData": {
+          "type": "object",
+          "example": "Specify date range of patent issue date",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "facetData": {
+          "type": "object",
+          "example": "Provide a list of facet names with their values to search",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/FacetMapInput"
+            }
+          }
+        },
+        "parameterData": {
+          "type": "object",
+          "example": "Provide parameter name and its value for search",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "recordStartNumber": {
+          "type": "integer",
+          "format": "int32",
+          "example": "Specify from which record the search should start"
+        },
+        "recordTotalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "example": "Specify how many number of results to be brought from search"
+        },
+        "searchText": {
+          "type": "string",
+          "example": "Search text to search all the results"
+        },
+        "sortDataBag": {
+          "type": "array",
+          "example": "Provide sort columns and orders so that results are sorted",
+          "items": {
+            "$ref": "#/definitions/Map«string,string»"
+          }
+        }
+      }
+    },
+    "SearchOutput": {
+      "type": "object",
+      "properties": {
+        "aggregationData": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/AggregationInfo"
+            }
+          }
+        },
+        "recordTotalQuantity": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "responseMessage": {
+          "type": "string"
+        },
+        "results": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
